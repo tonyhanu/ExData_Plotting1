@@ -1,4 +1,6 @@
 # Exploratory Data Analysis Project 1 - Plot 1
+# Author: Tony Hanusiak
+# Date: November 8, 2015
 
 # load required libraries
 library(sqldf)
@@ -20,6 +22,7 @@ prjdata <- mutate(tmpdata, daytime = paste(Date, Time, sep = " "))
 prjdata$daytime <- strptime(prjdata$daytime, format="%d/%m/%Y %H:%M:%S")
 unlink(temp)
 
+# In this script I created the graph on the screen device and then copied it to a png device 
 # create histogram
 hist(prjdata$Global_active_power, breaks = seq(from = 0, to = 8, by = 0.5), col = "#FF4500", xlab = "Global Active Power (kilowatts)", main = "Global Active Power", axes = F)
 axis(1, at=c(0,2,4,6), labels = T, tick = T)
