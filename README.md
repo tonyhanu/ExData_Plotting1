@@ -1,3 +1,11 @@
+## Description of Project Completion
+Four plots and  the four scripts used to create the plots were submitted as per the instructions below. The code for downloading, unzipping
+and readying the data for plotting is included in the scripts. In each case the code utilizes the **current working directory** of the user so the plot will appear in that directory.
+
+The first script is a little different than the others in both the handling of the data and the creation of the plot. The first script uses the "read.csv.sql()" function to load the data. This has the advantage of not loading the entire dataset. I did not see any way to handle na.strings in this function but since I did not see any NA values in the data being plotted I used it. For the first plot, I plotted to the screen graphics device and then then used the dev.copy() function to copy the plot to a png file.
+
+In the subsequent scripts I read the entire dataset into a dataframe and then used the dplyr filter() function to subset the rows I wanted for the two days of interest. I didn't see any NA values but I wanted to build in the handling of them rather than trust my eyes - mainly because the instructions mentioned that NA values appear as "?" so I thought I'd better handle that. For plotting of the 2nd, 3rd, and 4th plots I plotted directly to .png file rather than the method used in the first script.
+
 ## Introduction
 
 This assignment uses data from
